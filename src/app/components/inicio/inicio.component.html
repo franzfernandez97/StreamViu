@@ -1,1 +1,6 @@
-<p>inicio works!</p>
+<h1>Bienvenido a la página de inicio {{titulo}}</h1>
+<button (click)=pulsar()>Pulsa</button>
+@if(pulsaciones>0){
+    <p>Has pulsado {{pulsaciones}} veces</p>
+    <button (click)=resetPulsaciones()>Reset</button>
+}

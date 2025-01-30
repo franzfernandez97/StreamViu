@@ -7,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent {
+  public titulo:string
+  public pulsaciones:number
 
+  constructor(){
+    this.titulo = "Universidad Internacional de Valencia"
+    this.pulsaciones = 0
+  }
+
+  pulsar(){
+    this.pulsaciones++
+  }
+
+  resetPulsaciones(){
+    this.pulsaciones = 0
+  }
 }
