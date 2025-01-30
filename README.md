@@ -25,20 +25,29 @@ npm install -g @angular/cli
 # Create a Project and give a name to the Stream App
 ng new
 
-# Once is deployed delete src folder and public
+# Once is deployed delete src folder and public in the folder project
 cd angProject/
 rm -rf src
 rm -rf public
 ```
 
-2) In the folder project clone the repository
+2) In the folder directory clone the repository
 
 ```
+cd ../
 git clone https://github.com/franzfernandez97/StreamViu.git
 ```
 
-3) Run the project
+3) Copy all the info in the angProject to the StreamViu Folder
 
 ```
-ng serve
+cp -r angProject/* StreamViu/
 ```
+
+4) Enter in the StreamViu project and execute it
+
+```
+cd StreamViu/
+ng serve --host=$serverDomain
+```
+
