@@ -51,3 +51,5 @@ cd StreamViu/
 ng serve --host=$serverDomain
 ```
 
+5) Debes insertar los archivos mp3 a reproducir en la ruta de de Public/assets/songs
+

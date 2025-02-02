@@ -1,1 +1,24 @@
-<p>musica works!</p>
+<div>
+    <h1>Música VIU</h1>
+    <audio id="audio_player" controls></audio>
+    @if(playing){
+        <p>Reproduciendo: {{playing}}</p>
+    }
+    
+</div>
+<h1>Discos Disponibles</h1>
+@for (record of records; track $index) {
+    <h2>{{record.title}}</h2>
+    <h3>{{record.artist | uppercase}}</h3>
+    <h3 [ngClass]="
+    {'blue': record.year>=1990,
+    'green': record.year<1990,  
+    }">{{record.year}}</h3>
+    <img src={{record.image}} alt={{record.title}}>
+
+    @for (song of record.songs; track $index) {
+        <!--<p>{{song.track}}. <span>{{song.title}}</span></p>-->
+        <app-cancion [var_song]="song" (songToPlay)="reproducirCancion($event)"></app-cancion>
+    }
+    <hr *ngIf="$index<records.length-1">
+}
