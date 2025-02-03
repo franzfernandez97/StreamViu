@@ -52,5 +52,14 @@ ng serve --host=$serverDomain
 
 ```
 
-5) Debes insertar los archivos mp3 a reproducir en la ruta de de Public/assets/songs
+5) Para que los libros funcionen adecuadamente debes instalar
 
+```
+ng add @angular/material
+
+Choose a prebuilt theme name, or "custom" for a custom theme: Azure/Blue
+Set up global Angular Material typography styles? No
+Include the Angular animations module? Include and enable animations
+```
+
+6) Debes insertar los archivos mp3 a reproducir en la ruta de de Public/assets/songs si quieres agregar tus propias canciones
