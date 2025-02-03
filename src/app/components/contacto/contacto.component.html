@@ -1,1 +1,34 @@
-<p>contacto works!</p>
+<h1>Contacta con nosotros</h1>
+<form (ngSubmit)="onSubmit()" #viuForm="ngForm">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Pon aquí tu nombre"
+    #nombre="ngModel" [(ngModel)]="solicitud.nombre" required pattern="[a-zA-Z]+">
+    @if (!nombre.valid && nombre.touched){
+        <small>Eln nombre no es válido</small>
+    }
+    <br><br>
+
+    <label for="correo">Correo:</label><br>
+    <input type="text" id="correo" name="correo"
+    #correo="ngModel" [(ngModel)]="solicitud.correo" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+    @if (!correo.valid && correo.touched){
+        <small>El correo no es válido</small>
+    }
+    <br><br>
+    <label for="valoracion">¿Te gusta esta página?</label><br>
+    <input type="radio" id="valoracion_si" name="valoracion" value="Si"
+    #valoracion="ngModel" [(ngModel)]="solicitud.valoracion">Sí<br>
+    
+    <input type="radio" id="valoracion_no" name="valoracion" value="No"
+    #valoracion="ngModel" [(ngModel)]="solicitud.valoracion">No<br>
+    
+    <input type="radio" id="valoracion_nsnc" name="valoracion" value="Nsnc"
+    #valoracion="ngModel" [(ngModel)]="solicitud.valoracion">NS/NC<br><br>
+    
+    <label for="consulta">Consulta:</label><br>
+    <textarea id="consulta" name="consulta" rows="4"
+    #consulta="ngModel" [(ngModel)]="solicitud.consulta"></textarea><br><br>
+
+    <input type="submit" value="Envía" [disabled]="viuForm.invalid">
+</form> 
+

@@ -6,7 +6,7 @@ export class Disco{
         public title: string,
         public artist: string,
         public year: number,
-        public image: string,
+        public image_path: string,
         public songs: Array<Cancion>
     ){
 

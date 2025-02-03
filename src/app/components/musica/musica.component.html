@@ -14,7 +14,7 @@
     {'blue': record.year>=1990,
     'green': record.year<1990,  
     }">{{record.year}}</h3>
-    <img src={{record.image}} alt={{record.title}}>
+    <img src={{record.image_path}} alt={{record.title}}>
 
     @for (song of record.songs; track $index) {
         <!--<p>{{song.track}}. <span>{{song.title}}</span></p>-->
