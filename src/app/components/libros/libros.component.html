@@ -1,1 +1,16 @@
-<p>libros works!</p>
+<mat-card class="card">
+    <!--Header-->
+    <mat-card-header >
+        <mat-card-title>{{titulo}}</mat-card-title>
+        <mat-card-subtitle>{{autor}}</mat-card-subtitle>
+        <img mat-card-lg-image src={{ruta}}>
+    </mat-card-header>
+    <!--Content-->
+    <mat-card-content>
+        {{sinopsis}}
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button> Leer libro</button>
+    </mat-card-actions>
+
+</mat-card>
